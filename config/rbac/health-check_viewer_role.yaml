@@ -1,0 +1,27 @@
+# permissions for end users to view health-checks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: health-check-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: health-check-operator
+    app.kubernetes.io/part-of: health-check-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: health-check-viewer-role
+rules:
+- apiGroups:
+  - webapp.kube.mahith.xyz.kube.mahith.xyz
+  resources:
+  - health-checks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - webapp.kube.mahith.xyz.kube.mahith.xyz
+  resources:
+  - health-checks/status
+  verbs:
+  - get
