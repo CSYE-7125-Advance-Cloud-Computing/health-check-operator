@@ -16,7 +16,7 @@ pipeline {
 
         stage('Semantic Release') {
             tools {
-                nodejs "node LTS"
+                nodejs "nodejs"
             }
             steps {
                 script {
