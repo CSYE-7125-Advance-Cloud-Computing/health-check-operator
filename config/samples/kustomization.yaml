@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- webapp.kube.mahith.xyz_v1_health-check.yaml
+- webapp.kube.mahith.xyz_v1_healthcheck.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
